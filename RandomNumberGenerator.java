@@ -149,35 +149,35 @@ public class RandomNumberGenerator {
 		System.out.println();
 	}    
     
-    /**
-     * Prints out a series of random float values.
-     * 
-     * @param length The length of the series. 
-     * @param range The range of the series from 0 to the value specified (not inclusive).
-     */
-    public void randomSeriesTestFloat(int length, float range) {
-    	randomize();
-    	for (int k = 0; k < length; k++) {  	
-		float r = nextFloat(range);    						
-		System.out.print(r+", ");
-    	}
-    	System.out.println();    	
-    }     
-    
-    public static void main(String[] args) {
-        RandomNumberGenerator p = new RandomNumberGenerator();
+	/**
+	* Prints out a series of random float values.
+	* 
+	* @param length The length of the series. 
+	* @param range The range of the series from 0 to the value specified (not inclusive).
+	*/
+	public void randomSeriesTestFloat(int length, float range) {
+		randomize();
+		for (int k = 0; k < length; k++) {  	
+			float r = nextFloat(range);    						
+			System.out.print(r+", ");
+		}
+		System.out.println();    	
+	}     
 
-        // Print out a series of 1,000 float values from 0 to 3.4028235E38.
-        p.randomSeriesTestFloat(1000, Float.MAX_VALUE);                
+	public static void main(String[] args) {
+		RandomNumberGenerator p = new RandomNumberGenerator();
 
-        // Print out a series of 1,000 float values from 0 to 1000.
-        p.randomSeriesTestFloat(1000, 1000);                
-                
-        // Print out a series of 1,000 long values from 0 to 0x7fffffffffffffff-1.
-        p.randomSeriesTestLong(100, Long.MAX_VALUE);                                              
-        
-        // Print out a series of 100,000 int values from 0 to 999.
-        p.randomSeriesTestInt(100_000, 1000, false);
-    }
+		// Print out a series of 1,000 float values from 0 to 3.4028235E38.
+		p.randomSeriesTestFloat(1000, Float.MAX_VALUE);                
+
+		// Print out a series of 1,000 float values from 0 to 1000.
+		p.randomSeriesTestFloat(1000, 1000);                
+
+		// Print out a series of 1,000 long values from 0 to 0x7fffffffffffffff-1.
+		p.randomSeriesTestLong(100, Long.MAX_VALUE);                                              
+
+		// Print out a series of 100,000 int values from 0 to 999.
+		p.randomSeriesTestInt(100_000, 1000, false);
+	}
 
 }
