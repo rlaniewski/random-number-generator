@@ -117,7 +117,7 @@ public class RandomNumberGenerator {
 	public void randomSeriesTestInt(int length, int range, boolean printTable) {
 		randomize();
 
-		int[] freq = new int[length];
+		int[] freq = new int[range];
 
 		for (int k = 0; k < length; k++) {  	
 			int r = nextInt(range);    				
