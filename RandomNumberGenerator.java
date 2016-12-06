@@ -108,8 +108,8 @@ public class RandomNumberGenerator {
 	 * </ul>
 	 * 
 	 * @param length The length of the series. 
-     * @param range The range of the series from 0 to the value specified (not inclusive).
-     * @param printTable Optionally print the distribution table.
+     	 * @param range The range of the series from 0 to the value specified (not inclusive).
+     	 * @param printTable Optionally print the distribution table.
 	 */
     public void randomSeriesTestInt(int length, int range, boolean printTable) {
     	randomize();
@@ -165,10 +165,10 @@ public class RandomNumberGenerator {
         RandomNumberGenerator p = new RandomNumberGenerator();
 
         // Print out a series of 1,000 float values from 0 to 3.4028235E38.
-        p.randomSeriesTestFloat(100, Float.MAX_VALUE);                
+        p.randomSeriesTestFloat(1000, Float.MAX_VALUE);                
 
         // Print out a series of 1,000 float values from 0 to 1000.
-        p.randomSeriesTestFloat(100, 1000);                
+        p.randomSeriesTestFloat(1000, 1000);                
                 
         // Print out a series of 1,000 long values from 0 to 0x7fffffffffffffff-1.
         p.randomSeriesTestLong(100, Long.MAX_VALUE);                                              
