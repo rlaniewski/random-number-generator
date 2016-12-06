@@ -106,8 +106,8 @@ public class RandomNumberGenerator {
 	/**
 	 * Prints out:
 	 * <ul>
-	 * 		<li>A series of random int values.</li>
-	 * 		<li>A distribution table showing the occurrence of each value in the range.</li>
+	 * 	<li>A series of random int values.</li>
+	 * 	<li>A distribution table showing the occurrence of each value in the range.</li>
 	 * </ul>
 	 * 
 	 * @param length The length of the series. 
@@ -158,8 +158,8 @@ public class RandomNumberGenerator {
     public void randomSeriesTestFloat(int length, float range) {
     	randomize();
     	for (int k = 0; k < length; k++) {  	
-			float r = nextFloat(range);    						
-			System.out.print(r+", ");
+		float r = nextFloat(range);    						
+		System.out.print(r+", ");
     	}
     	System.out.println();    	
     }     
