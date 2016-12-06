@@ -55,7 +55,7 @@ public class RandomNumberGenerator {
 	}	
 
 	/**
-	 * Generate a new seed value using the current system time. 
+	 * Generates a new seed value using the current system time. 
 	 */
 	public void randomize() {
 		x = System.currentTimeMillis();
@@ -111,8 +111,8 @@ public class RandomNumberGenerator {
 	 * </ul>
 	 * 
 	 * @param length The length of the series. 
-     	 * @param range The range of the series from 0 to the value specified (not inclusive).
-     	 * @param printTable Optionally print the distribution table.
+	 * @param range The range of the series from 0 to the value specified (not inclusive).
+	 * @param printTable Optionally print the distribution table.
 	 */
 	public void randomSeriesTestInt(int length, int range, boolean printTable) {
 		randomize();
@@ -120,9 +120,9 @@ public class RandomNumberGenerator {
 		int[] freq = new int[length];
 
 		for (int k = 0; k < length; k++) {  	
-				int r = nextInt(range);    				
-				freq[r]++;			
-				System.out.print(r+", ");
+			int r = nextInt(range);    				
+			freq[r]++;			
+			System.out.print(r+", ");
 		}    	
 
 		System.out.println();
