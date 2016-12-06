@@ -14,7 +14,7 @@
  */ 
  
  /**
-  * <p>A pseudo random number generator. 
+  * <p>A pseudo-random number generator. 
   *  
   * @author Robert Laniewski <depthn@gmail.com>
   * @version 1.0 
@@ -22,12 +22,12 @@
 public class RandomNumberGenerator {
    
 	/**
-	 * the underlying (double) values. 
+	 * The underlying (double) values. 
 	 */
 	private double x = 2.0d, y, z;
 	
 	/** 
-	 * log to the base 10 of this value indicates how many digits after the decimal point to discard.
+	 * Log to the base 10 of this value indicates how many digits after the decimal point to discard.
 	 */
 	private static final long PRECISION = 100000; 
 	
@@ -54,7 +54,9 @@ public class RandomNumberGenerator {
 		obfuscate();
 	}	
 
-	// Generate a new seed value using the current system time. 
+	/**
+	 * Generate a new seed value using the current system time. 
+	 */
 	public void randomize() {
 		x = System.currentTimeMillis();
 		obfuscate();
@@ -68,8 +70,9 @@ public class RandomNumberGenerator {
 		y = Math.floor(z);    	
 	}
 
-	
-	// TBD: Under development	
+	/**
+	 * TBD: Under development 
+	 */
 	public float nextFloat(float range) {
 		next();		
 		float r = (float) (z-y)*range;		
@@ -111,40 +114,40 @@ public class RandomNumberGenerator {
      	 * @param range The range of the series from 0 to the value specified (not inclusive).
      	 * @param printTable Optionally print the distribution table.
 	 */
-    public void randomSeriesTestInt(int length, int range, boolean printTable) {
-    	randomize();
-    	
-    	int[] freq = new int[length];
-    	
-    	for (int k = 0; k < length; k++) {  	
-			int r = nextInt(range);    				
-			freq[r]++;			
-			System.out.print(r+", ");
-    	}    	
+	public void randomSeriesTestInt(int length, int range, boolean printTable) {
+		randomize();
 
-    	System.out.println();
-    	
-    	if (printTable) {
-	    	for (int i = 0; i < range; i++) {
-	    		System.out.println(i+": "+freq[i]);
-	    	}  
-    	}
-    }
+		int[] freq = new int[length];
 
-    /**
-     * Prints out a series of random long values.
-     * 
-     * @param length The length of the series. 
-     * @param range The range of the series from 0 to the value specified (not inclusive).
-     */
-    public void randomSeriesTestLong(int length, long range) {
-    	randomize();
-    	for (int k = 0; k < length; k++) {  	
+		for (int k = 0; k < length; k++) {  	
+				int r = nextInt(range);    				
+				freq[r]++;			
+				System.out.print(r+", ");
+		}    	
+
+		System.out.println();
+
+		if (printTable) {
+			for (int i = 0; i < range; i++) {
+				System.out.println(i+": "+freq[i]);
+			}  
+		}
+	}
+
+	/**
+	* Prints out a series of random long values.
+	* 
+	* @param length The length of the series. 
+	* @param range The range of the series from 0 to the value specified (not inclusive).
+	*/
+	public void randomSeriesTestLong(int length, long range) {
+		randomize();
+		for (int k = 0; k < length; k++) {  	
 			long r = nextLong(range);    						
 			System.out.print(r+", ");
-    	}   
-    	System.out.println();
-    }    
+		}   
+		System.out.println();
+	}    
     
     /**
      * Prints out a series of random float values.
