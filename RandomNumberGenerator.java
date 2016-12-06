@@ -91,15 +91,15 @@ public class RandomNumberGenerator {
 		return r;
 	}	
 
-	public int nextByte(byte range) {
+	public byte nextByte(byte range) {
 		next();		
-		int r = (byte) Math.floor((z-y)*range);		
+		byte r = (byte) Math.floor((z-y)*range);		
 		return r;
 	}	
 
-	public int nextChar(char range) {
+	public char nextChar(char range) {
 		next();		
-		int r = (char) Math.floor((z-y)*range);		
+		char r = (char) Math.floor((z-y)*range);		
 		return r;
 	}		
 	
