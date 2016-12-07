@@ -174,7 +174,7 @@ public class RandomNumberGenerator {
 		p.randomSeriesTestFloat(1000, 1000);                
 
 		// Print out a series of 1,000 long values from 0 to 0x7fffffffffffffff-1.
-		p.randomSeriesTestLong(100, Long.MAX_VALUE);                                              
+		p.randomSeriesTestLong(1000, Long.MAX_VALUE);                                              
 
 		// Print out a series of 100,000 int values from 0 to 999.
 		p.randomSeriesTestInt(100_000, 1000, false);
