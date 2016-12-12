@@ -170,10 +170,10 @@ public class RandomNumberGenerator {
 		// Print out a series of 1,000 float values from 0 to 3.4028235E38.
 		p.randomSeriesTestFloat(1000, Float.MAX_VALUE);                
 
-		// Print out a series of 1,000 float values from 0 to 1000.
+		// Print out a series of 1,000 float values from 0 to 999.
 		p.randomSeriesTestFloat(1000, 1000);                
 
-		// Print out a series of 1,000 long values from 0 to 0x7fffffffffffffff-1.
+		// Print out a series of 1,000 long values from 0 to 0x7fffffffffffffff.
 		p.randomSeriesTestLong(1000, Long.MAX_VALUE);                                              
 
 		// Print out a series of 100,000 int values from 0 to 999.
