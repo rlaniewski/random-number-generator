@@ -16,7 +16,7 @@
  /**
   * <p>A pseudo-random number generator. 
   *  
-  * @author Robert Laniewski <depthn@gmail.com>
+  * @author R. Laniewski <rlaniewski.music@gmail.com>
   * @version 1.0 
   */
 public class RandomNumberGenerator {
